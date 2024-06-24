@@ -1,4 +1,4 @@
-import { Product } from "../models/models"
+import { Product } from "../models/models.js"
 
 class ProductController {
     
@@ -127,3 +127,5 @@ class ProductController {
     }
 };
 }
+
+export default ProductController

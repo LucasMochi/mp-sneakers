@@ -3,24 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "api/app.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api/config/server"
+    "start": "node --env-file .env",
+    "dev": "node --env-file .env --watch ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
-    "path": "^0.12.7",
-    "sequelize": "^6.37.3",
-    "morgan": "^1.10.0",
     "jsonwebtoken": "^8.5.1",
-    "bcrypt": "^5.0.1"
+    "morgan": "^1.10.0",
+    "mysql2": "^3.10.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.3"
   }
 }

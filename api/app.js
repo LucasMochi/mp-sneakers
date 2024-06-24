@@ -1,17 +1,21 @@
-require("dotenv").config();
-
-//Dependencies
 import express from "express";
-const cors = require("cors");
 import routes from "./routes/routes.js";
+import connection from "./connection/connection.js";
+import { DB_PORT } from "./config/config.js";
 
-//Instancia de express
 const app = express();
 
-app.use(cors())
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 app.use("/app", routes);
 
-module.exports = app;
+app.use(errorNotFound);
+
+await connection.sync({ force: false });
+// await roleSeed()
+
+app.listen(DB_PORT, () => {
+  console.log(`🚀 listen  ${DB_PORT}`);
+});

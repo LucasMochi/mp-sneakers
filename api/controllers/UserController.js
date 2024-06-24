@@ -1,5 +1,5 @@
-import { User, Role } from "../models/models"
-import { generateToken, verifyToken } from "../utils/token.js";
+import { User, Role } from "../models/models.js"
+import { generateToken, } from "../utils/token.js";
 
 class UserController {
     
