@@ -1,11 +1,11 @@
-import { Product } from "../models/models.js"
+import { Product, User } from "../models/models.js"
 
 class ProductController {
     
     createProduct = async (req, res) => {
         try {
             const { name, price, image, date, marca, favsCount } = req.body;
-            const data = await User.create({ name, price, image, date, marca, favsCount });
+            const data = await Product.create({ name, price, image, date, marca, favsCount });
             res.status(201).send({
               success: true,
               message: `Producto creado con exito`,
@@ -19,7 +19,7 @@ class ProductController {
         try {
           const { id } = req.params;
           const { name, price, image, marca } = req.body;
-          const data = await User.update(
+          const data = await Product.update(
             { name, price, image, marca },
             { where: { id } }
           );
@@ -125,7 +125,7 @@ class ProductController {
             message: error.message,
         });
     }
-};
+  };
 }
 
 export default ProductController

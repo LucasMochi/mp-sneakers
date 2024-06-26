@@ -14,7 +14,6 @@ app.use("/app", routes);
 app.use(errorNotFound);
 
 await connection.sync({ force: false });
-// await roleSeed()
 
 app.listen(DB_PORT, () => {
   console.log(`🚀 listen  ${DB_PORT}`);

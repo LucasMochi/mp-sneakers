@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken" // falta instalar
+import jwt from "jsonwebtoken"
 import { SECRET } from "../config/config.js"
 
 export const generateToken = (payload) => {

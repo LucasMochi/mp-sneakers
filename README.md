@@ -32,3 +32,6 @@ Proyecto para gestionar productos y usuarios utilizando Node.js, Express y Seque
   - Actualización: `PUT /api/product/:id`
   - Obtener por ID: `GET /api/product/:id`
   - Eliminación: `DELETE /api/product/:id`
+  - Añadir favoritos: `POST /api/product/:userId/add-fav/:productId`
+  - Listar favoritos: `GET /api/product/:userId/favs`
+  - Eliminar favoritos: `DELETE /api/product//:userId/favs/:productId`
