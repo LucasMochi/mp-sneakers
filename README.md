@@ -13,6 +13,11 @@ Proyecto para gestionar productos y usuarios utilizando Node.js, Express y Seque
 
 ## Configuración
 1. Reemplaza el archivo ".env.example" por ".env" con los valores correctos.
+2. Crear base de datos (MySQL) con las siguientes tablas:
+    - User
+    - Role
+    - Product
+    - Favorites
 
 ## Ejecución
 1. Inicia el servidor:
