@@ -1,20 +1,17 @@
 import express from "express";
-import routes from "./routes/routes.js";
 import connection from "./connection/connection.js";
-import { DB_PORT } from "./config/config.js";
+import { SERVER_PORT } from "./config/config.js";
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
-app.use(cookieParser());
 
-app.use("/app", routes);
-
-app.use(errorNotFound);
+//app.use(errorNotFound);
 
 await connection.sync({ force: false });
 
-app.listen(DB_PORT, () => {
-  console.log(`🚀 listen  ${DB_PORT}`);
+app.listen(SERVER_PORT, () => {
+  console.log(`🚀 listen  ${SERVER_PORT}`);
 });

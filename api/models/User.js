@@ -49,6 +49,7 @@ class User extends Model {
         {
             sequelize: db,
             modelName: "User",
+            tableName: 'users',
         }
     )
 

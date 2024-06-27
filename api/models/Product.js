@@ -41,6 +41,7 @@ class Product extends Model {}
         {
             sequelize: db,
             modelName: "Product",
+            tableName: 'products'
         }
 
     )

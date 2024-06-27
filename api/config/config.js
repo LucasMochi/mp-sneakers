@@ -6,6 +6,7 @@ const DB_HOST = process.env.DB_HOST
 const DB_DIALECT = process.env.DB_DIALECT
 const DB_PORT= process.env.DB_PORT
 const SECRET = process.env.SECRET
+const SERVER_PORT = process.env.SERVER_PORT
 
 export {
     DB_NAME,
@@ -14,5 +15,6 @@ export {
     DB_HOST,
     DB_DIALECT,
     DB_PORT,
-    SECRET
+    SECRET,
+    SERVER_PORT
 }
