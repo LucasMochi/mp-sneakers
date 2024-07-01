@@ -5,14 +5,6 @@ class Favourites extends Model {}
 
     Favourites.init(
         {
-            productId: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
-            userId: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-            },
         },
         {
             sequelize: db,
